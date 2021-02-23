@@ -15,10 +15,10 @@ jobs:
       with:
         envs: 'MYTOKEN MYTOKEN2'
         usesh: true
-        prepare: pkg install -y curl py37-pip
+        prepare: pkg install -y curl py37-pip gmake
         run: |
           pip install -r requirements-dev.txt
-          make
+          gmake
           python3.7 test_duo_openvpn.py
           whoami
           env
