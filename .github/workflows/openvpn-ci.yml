@@ -18,7 +18,8 @@ jobs:
         prepare: pkg install -y curl py37-pip
         run: |
           pip install -r requirements-dev.txt
-          python test_duo_openvpn.py
+          make
+          python3.7 test_duo_openvpn.py
           whoami
           env
           freebsd-version
