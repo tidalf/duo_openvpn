@@ -23,4 +23,9 @@ jobs:
           whoami
           env
           freebsd-version
-
+    - uses: actions/upload-artifact@v2
+      with:
+        name: duo_openvpn
+        path: |
+          *.py
+          *.so
