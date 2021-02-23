@@ -1,3 +1,4 @@
+Autobuild
 # Overview
 
 [![Build Status](https://github.com/duosecurity/duo_openvpn/workflows/OpenVPN%20Python%20component%20CI/badge.svg)](https://github.com/duosecurity/duo_openvpn/actions)
