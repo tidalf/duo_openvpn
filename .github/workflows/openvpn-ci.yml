@@ -3,7 +3,7 @@ on: [push, pull_request]
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     strategy:
       matrix:
@@ -11,10 +11,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      
       - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: ${{ matrix.python-version }}
+        uses: vmactions/freebsd-vm@v0.1.2
       - name: Dependencies
         run: pip install -r requirements-dev.txt
       - name: Run test script
